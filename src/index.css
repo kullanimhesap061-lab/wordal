@@ -1,0 +1,101 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-display: 'Fredoka', cursive, sans-serif;
+    --font-body: 'Plus Jakarta Sans', sans-serif;
+  }
+
+  body {
+    font-family: var(--font-body);
+    background-color: #2b0b57;
+    background-image: 
+      radial-gradient(at 0% 0%, hsla(266, 75%, 35%, 0.8) 0px, transparent 50%),
+      radial-gradient(at 100% 0%, hsla(330, 85%, 45%, 0.4) 0px, transparent 50%),
+      radial-gradient(at 100% 100%, hsla(190, 85%, 40%, 0.4) 0px, transparent 50%),
+      radial-gradient(at 0% 100%, hsla(280, 80%, 30%, 0.6) 0px, transparent 50%);
+    background-attachment: fixed;
+    min-height: 100vh;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  h1, h2, h3, h4, .font-fun {
+    font-family: var(--font-display);
+  }
+}
+
+/* 3D button press effect Kahoot style */
+.btn-3d {
+  transition: all 0.1s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 6px 0 rgba(0, 0, 0, 0.25);
+}
+
+.btn-3d:active:not(:disabled) {
+  transform: translateY(4px);
+  box-shadow: 0 2px 0 rgba(0, 0, 0, 0.25);
+}
+
+.btn-3d-red {
+  background-color: #e21b3c;
+  box-shadow: 0 6px 0 #9c0e25;
+}
+.btn-3d-red:active:not(:disabled) {
+  transform: translateY(4px);
+  box-shadow: 0 2px 0 #9c0e25;
+}
+
+.btn-3d-blue {
+  background-color: #1368ce;
+  box-shadow: 0 6px 0 #094186;
+}
+.btn-3d-blue:active:not(:disabled) {
+  transform: translateY(4px);
+  box-shadow: 0 2px 0 #094186;
+}
+
+.btn-3d-yellow {
+  background-color: #ffa602;
+  box-shadow: 0 6px 0 #b36e00;
+}
+.btn-3d-yellow:active:not(:disabled) {
+  transform: translateY(4px);
+  box-shadow: 0 2px 0 #b36e00;
+}
+
+.btn-3d-green {
+  background-color: #26890c;
+  box-shadow: 0 6px 0 #155506;
+}
+.btn-3d-green:active:not(:disabled) {
+  transform: translateY(4px);
+  box-shadow: 0 2px 0 #155506;
+}
+
+.btn-3d-purple {
+  background-color: #8b3fd9;
+  box-shadow: 0 6px 0 #572091;
+}
+.btn-3d-purple:active:not(:disabled) {
+  transform: translateY(4px);
+  box-shadow: 0 2px 0 #572091;
+}
+
+/* Floating animation */
+@keyframes float {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-8px) rotate(1deg); }
+}
+
+.animate-float {
+  animation: float 4s ease-in-out infinite;
+}
+
+/* Pulse badge */
+@keyframes pulse-subtle {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+}
+.animate-pulse-subtle {
+  animation: pulse-subtle 2s infinite ease-in-out;
+}

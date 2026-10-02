@@ -1,0 +1,6 @@
+{
+  "name": "Wordal! - Interactive English Quiz & Multiplayer Game",
+  "description": "Wordal! Learn English. Play. Improve. An interactive, Kahoot-style English learning game with CEFR levels, AI-generated questions, Picture It, Word Build, and real-time multiplayer rooms.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
